@@ -1,10 +1,12 @@
 ## **Описание проекта**
+
 Этот проект представляет собой **REST API** для управления пользователями. 
 Реализованы **CRUD операции** (создание, чтение, обновление, удаление).
 
 ---
 
 ## **Технологии**
+
 | Технология      | Использование |
 |----------------|--------------|
 | **Spring Boot** | Разработка REST API |
@@ -41,5 +43,31 @@
 **После запуска API доступно по:** `http://localhost:8080`  
 **Swagger UI:** `http://localhost:8080/swagger-ui.html`  
 **Документация OpenAPI:** `http://localhost:8080/api-docs`  
+
+---
+
+## **Структура проекта**
+
+```
+📂 src/main/java/com/misis/apidemo
+ ├── 📂 controller       # Контроллеры (REST API)
+ │   ├── UserRestApiController.java
+ │
+ ├── 📂 db              # Работа с БД
+ │   ├── User.java
+ │   ├── UserRepository.java
+ │
+ ├── 📂 dto             # Data Transfer Objects (DTO)
+ │   ├── UserCreateDTO.java
+ │   ├── UserDTO.java
+ │   ├── UserUpdateDTO.java
+ │   ├── 📂 mapper       # MapStruct маппинг
+ │       ├── UserMapper.java
+ │
+ ├── 📂 service         # Основная логика приложения
+ │   ├── ApiDemoApplication.java
+ │
+ ├── package-info.java  # Информация о пакете
+```
 
 ---
