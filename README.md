@@ -18,7 +18,9 @@
 ---
 
 ## **Запуск через Docker Compose**
+
 **Шаги:**
+
 1. **Склонируйте репозиторий**
    ```bash
    git clone https://github.com/your-repo-url.git
