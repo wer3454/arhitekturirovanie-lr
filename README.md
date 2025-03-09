@@ -23,8 +23,8 @@
 
 1. **Склонируйте репозиторий**
    ```bash
-   git clone https://github.com/your-repo-url.git
-   cd your-repo-folder
+   git clone https://gitflic.ru/project/constromanov/arhitekturirovanie-lr.git
+   cd arhitekturirovanie-lr
    ```
 
 2. **Запустите контейнеры**
