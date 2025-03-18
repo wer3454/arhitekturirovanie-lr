@@ -12,8 +12,6 @@ services:
       - .:/var/lib/postgresql/data
     restart: always
 
-version: "3"
-services:
   keydb:
     image: "eqalpha/keydb:x86_64_v5.3.3"
     container_name: keydb
