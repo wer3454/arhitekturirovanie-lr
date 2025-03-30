@@ -36,9 +36,14 @@
    ```
 
 3. **Запустите приложение**
-   ```bash
-   mvn spring-boot:run
-   ```
+
+Выполните `mvn spring-boot:run` через Intellij:
+
+![springbootrun.png](img/springbootrun.png)
+
+Или нажмите на кнопку запуска приложения:
+
+![run.png](img/run.png)
 
 **После запуска API доступно по:** `http://localhost:8080`  
 **Swagger UI:** `http://localhost:8080/swagger-ui.html`  
