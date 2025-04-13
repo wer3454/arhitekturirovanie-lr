@@ -1,4 +1,4 @@
-package com.misis.apidemo.configuration;
+package com.misis.archapp.contract.configuration;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
