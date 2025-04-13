@@ -33,3 +33,5 @@ build/
 .vscode/
 
 dockerfiles/binaries/
+dockercompose/**
+!dockercompose/docker-compose.yaml
