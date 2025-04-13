@@ -13,6 +13,7 @@ services:
   
   postgres:
     image: postgres:13.3
+    container_name: postgres-lab3
     environment:
       POSTGRES_DB: "apidemo-db"
       POSTGRES_USER: "postgres"
