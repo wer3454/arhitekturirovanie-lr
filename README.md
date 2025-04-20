@@ -36,29 +36,32 @@
    cd arhitekturirovanie-lr
    ```
 
-2. **Запустите контейнеры**
+2. **Соберите исходники сервисов**
+   ```bash
+   mvn clean install
+   ```
+   
+   Или используейте вкладку maven в IntellijIDEA (кнопки clean и install во вкладке arch-app):
+   
+   ![img.png](img/img.png)
+
+3. **Соберите контейнеры сервисов**
+   ```bash
+   cd dockercompose
+   docker-compose build
+   ```
+
+4. **Запустите контейнеры**
    ```bash
    cd dockercompose
    docker-compose up -d
    ```
 
-3. **Запустите нужные сервисы**
-
-Выполните `mvn spring-boot:run` для `user-service` через Intellij:
-
-![img.png](img/springbootrunuapp.png)
-
-Выполните `mvn spring-boot:run` для `notification-service` через Intellij:
-
-![img.png](img/springbootrunnotifapp.png)
-
-Или нажмите на кнопку запуска приложения:
-
-![img.png](img/run.png)
-
 **После запуска user-service API доступно по:** `http://localhost:8080`  
 **Swagger UI:** `http://localhost:8080/swagger-ui.html`  
 **Документация OpenAPI:** `http://localhost:8080/api-docs`  
+
+**После внесения изменеий в код выполните команду `docker compose down` и повторите шаги 2-4**
 
 ---
 
