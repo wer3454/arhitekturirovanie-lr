@@ -7,6 +7,7 @@ services:
     environment:
       SPRING_RABBITMQ_HOST: 'rabbitmq'
       SPRING_DATASOURCE_URL: 'jdbc:postgresql://balance-db:5432/balance-db'
+      AXON_AXONSERVER_SERVERS: 'axonserver:8124'
     networks:
       - balance-net
       - shared-net
@@ -86,6 +87,24 @@ services:
     depends_on:
       - rabbitmq
     restart: unless-stopped
+
+  axonserver:
+    image: axoniq/axonserver
+    container_name: axonserver-lab5
+    ports:
+      - "8024:8024"   # HTTP UI (dashboard, queries)
+      - "8124:8124"   # gRPC (для приложений)
+    volumes:
+      - ./axon-data:/axonserver/data
+      - ./axon-events:/axonserver/events
+      - ./axon-config:/axonserver/config
+    environment:
+      AXONIQ_AXONSERVER_NAME: axonserver
+      AXONIQ_AXONSERVER_HOSTNAME: axonserver
+      AXONIQ_AXONSERVER_DEVMODE_ENABLED: true
+    restart: unless-stopped
+    networks:
+      - shared-net
 
   rabbitmq:
     image: "rabbitmq:3-management"
