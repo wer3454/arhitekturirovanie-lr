@@ -78,6 +78,8 @@ services:
       - "3000:3000"   # Grafana web UI
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin  # Пароль администратора
+    volumes:
+      - grafana-data:/var/lib/grafana
     depends_on:
       - prometheus  # Дожидается прометея
 
@@ -101,3 +103,4 @@ services:
 volumes:
   data:
     driver: local
+  grafana-data:
