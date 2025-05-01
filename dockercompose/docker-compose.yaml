@@ -7,6 +7,9 @@ services:
     environment:
       SPRING_RABBITMQ_HOST: 'rabbitmq'
       SPRING_DATASOURCE_URL: 'jdbc:postgresql://balance-db:5432/balance-db'
+    networks:
+      - balance-net
+      - shared-net
     ports:
       - "8081:8080"
     depends_on:
@@ -19,7 +22,6 @@ services:
     container_name: balance-db-lab5
     networks:
       - balance-net
-      - shared-net
     environment:
       POSTGRES_DB: "balance-db"
       POSTGRES_USER: "postgres"
@@ -37,6 +39,9 @@ services:
       SPRING_DATA_REDIS_HOST: 'user-keydb'
       SPRING_RABBITMQ_HOST: 'rabbitmq'
       SPRING_DATASOURCE_URL: 'jdbc:postgresql://user-db:5432/apidemo-db'
+    networks:
+      - user-net
+      - shared-net
     ports:
       - "8080:8080"
     depends_on:

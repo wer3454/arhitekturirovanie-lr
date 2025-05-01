@@ -10,6 +10,11 @@ scrape_configs:
     static_configs:
       - targets: ['user-service:8080']
 
+  - job_name: 'balance-service'
+    metrics_path: "/actuator/prometheus"
+    static_configs:
+      - targets: [ 'balance-service:8080' ]
+
   - job_name: 'rabbitmq'
     static_configs:
       - targets: ['rabbitmq:15692']
